@@ -45,7 +45,7 @@ operationEl.forEach((operation) => {
   });
 });
 
-// 계산 중간에 display-2를 비우고 그 값을 display-1로 옮겨서 보여줌
+// 계산 중간에 display-2를 비우고 그 값을 display-1로 옮겨서 출력
 function clearVar(name = "") {
   dis1Num += dis2Num + " " + name + " ";
   display1El.innerText = dis1Num;
@@ -53,3 +53,22 @@ function clearVar(name = "") {
   dis2Num = "";
   tempResultEl.innerText = result;
 }
+
+// 실제 연산
+function mathOperation() {
+  if (lastOperation === "*") {
+    result = parseFloat(result) * parseFloat(dis2Num);
+  } else if (lastOperation === "+") {
+    result = parseFloat(result) + parseFloat(dis2Num);
+  } else if (lastOperation === "-") {
+    result = parseFloat(result) - parseFloat(dis2Num);
+  } else if (lastOperation === "/") {
+    result = parseFloat(result) / parseFloat(dis2Num);
+  } else if (lastOperation === "%") {
+    result = parseFloat(result) % parseFloat(dis2Num);
+  }
+}
+
+// display-1에 연산자 및 숫자 추가
+// 연산 결과를 display-2에 출력
+// 연산 중간 값 display-3에서 비움
