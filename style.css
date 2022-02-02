@@ -14,7 +14,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: dodgerblue;
+  background-color: black;
 }
 .container {
   width: 90%;
@@ -30,30 +30,29 @@ section {
   position: relative;
   text-align: right;
   font-size: 30px;
+  color: rgba(0, 0, 0, 0.3);
   background-color: whitesmoke;
 }
-.display__top {
+.display-1 {
   height: 20px;
   overflow: hidden;
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.3);
 }
-.display__main {
+.display-2 {
   color: rgba(0, 0, 0, 0.8);
 }
-.display__bottom {
+.temp-result {
+  bottom: 10px;
   position: absolute;
   text-align: right;
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.3);
 }
-.buttons {
+.all-buttons {
   display: grid;
   grid-template: repeat(4, 1fr) / repeat(4, 1fr);
   font-size: 30px;
   color: white;
 }
-
 .button {
   height: 100px;
   width: 100%;
@@ -63,5 +62,5 @@ section {
 }
 .button:hover {
   cursor: pointer;
-  border: 1px solid white;
+  background-color: deepskyblue;
 }
