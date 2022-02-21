@@ -72,3 +72,24 @@ function mathOperation() {
 // display-1에 연산자 및 숫자 추가
 // 연산 결과를 display-2에 출력
 // 연산 중간 값 display-3에서 비움
+
+equalEl.addEventListener("click", (e) => {
+  if (!dis1Num || !dis2Num) return;
+  haveDot = false;
+  mathOperation();
+  clearVar();
+  display2El.innerText = result;
+  tempResultEl.innerText = "";
+  dis2Num = result;
+  dis1Num = "";
+});
+
+// clear-all
+clearAllEl.addEventListener("click", (e) => {
+  display1El.innerText = "0";
+  display2El.innerText = "0";
+  dis1Num = "";
+  dis2Num = "";
+  result = "";
+  tempResultEl.innerText = "0";
+});
