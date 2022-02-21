@@ -117,13 +117,29 @@ window.addEventListener("keydown", (e) => {
     e.key === "."
   ) {
     clickButtonEl(e.key);
+  } else if (e.key === "*" || e.key === "+" || e.key === "-" || e.key === "/") {
+    clickOperation(e.key);
+  } else if (e.key == "Enter" || e.key === "=") {
+    clickEqual();
   }
 });
-
+// 숫자
 function clickButtonEl(key) {
   numbersEl.forEach((button) => {
     if (button.innerText === key) {
       button.click();
     }
   });
+}
+// 연산자
+function clickOperation(key) {
+  operationEl.forEach((button) => {
+    if (button.innerText === key) {
+      button.click();
+    }
+  });
+}
+// 엔터 또는 = (결과)
+function clickEqual() {
+  equalEl.click();
 }
